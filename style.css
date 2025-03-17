@@ -1,56 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:30px;
+    gap: 30px;
     flex-direction: column;
+    text-align: center;
+    padding: 20px;
 }
-#logo{
+
+#logo {
     width: 20vw;
+    max-width: 150px;
 }
-h1{
+
+h1 {
     color: aliceblue;
     font-family: "Protest Guerrilla", sans-serif;
 }
-#name{
-    color:rgb(212, 43, 122);
+
+#name, #va {
     font-size: 45px;
 }
-#va{
-    color:rgb(43, 206, 212);
-    font-size: 45px; 
+
+#name {
+    color: rgb(212, 43, 122);
 }
-#voice{
+
+#va {
+    color: rgb(43, 206, 212);
+}
+
+#voice {
     width: 100px;
     display: none;
-   
 }
-#btn{
-width: 30%;
-background: linear-gradient(to right,rgb(21, 145, 207),rgb(201, 41, 116));
-padding: 10px;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
-font-size: 20px;
-border-radius: 20px;
-color: white;
-box-shadow: 2px 2px 10px rgb(21, 145, 207),2px 2px 10px rgb(201, 41, 116);
-border: none;
-transition: all 0.5s;
-cursor: pointer;
+
+#btn {
+    width: 80%;
+    max-width: 300px;
+    background: linear-gradient(to right, rgb(21, 145, 207), rgb(201, 41, 116));
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 2px 2px 10px rgb(21, 145, 207), 2px 2px 10px rgb(201, 41, 116);
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
 }
-#btn:hover{
-    box-shadow: 2px 2px 20px rgb(21, 145, 207),2px 2px 20px rgb(201, 41, 116);
+
+#btn:hover {
+    box-shadow: 2px 2px 20px rgb(21, 145, 207), 2px 2px 20px rgb(201, 41, 116);
     letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #name, #va {
+        font-size: 35px;
+    }
+    
+    #btn {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        width: 50vw;
+        max-width: 120px;
+    }
+
+    #name, #va {
+        font-size: 28px;
+    }
+
+    #btn {
+        font-size: 16px;
+        padding: 8px;
+    }
 }
